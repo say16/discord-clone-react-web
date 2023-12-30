@@ -3,7 +3,7 @@ import ChannelListAreaHeader from "../../molecules/channel-list-area-header";
 import ChannelListAreaItem from "../../atoms/channel-list-area-item";
 import ChannelListAreaSection from "../../atoms/channel-list-area-section";
 import { FaCalendarDay, FaHashtag } from "react-icons/fa6";
-import ChannelListAreaCollapse from "../../molecules/channel-list-area-collapse";
+import ChannelListSectionCollapse from "../../molecules/channel-list-section-collapse";
 import { HiSpeakerWave } from "react-icons/hi2";
 
 function ChannelListArea() {
@@ -43,7 +43,7 @@ function ChannelListArea() {
       </ChannelListAreaSection>
       <hr className="mx-2 rounded-full border-main-white-1/5" />
       <ChannelListAreaSection>
-        <ChannelListAreaCollapse
+        <ChannelListSectionCollapse
           isSelectedChannelItemIndex={isSelectedChannelItemIndex}
           onClickChannelItem={(index) => onClickChannelItem(index)}
           collapseTitle="TEXT CHANNELS"
@@ -51,7 +51,7 @@ function ChannelListArea() {
         />
       </ChannelListAreaSection>
       <ChannelListAreaSection>
-        <ChannelListAreaCollapse
+        <ChannelListSectionCollapse
           isSelectedChannelItemIndex={isSelectedChannelItemIndex}
           onClickChannelItem={(index) => onClickChannelItem(index)}
           collapseTitle="VOICE CHANNELS"

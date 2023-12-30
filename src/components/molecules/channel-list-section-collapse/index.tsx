@@ -10,7 +10,7 @@ type Props = {
   channelsIcon?: ReactNode;
 };
 
-function ChannelListAreaCollapse(props: Props) {
+function ChannelListSectionCollapse(props: Props) {
   const {
     isSelectedChannelItemIndex,
     onClickChannelItem,
@@ -66,4 +66,4 @@ function ChannelListAreaCollapse(props: Props) {
   );
 }
 
-export default ChannelListAreaCollapse;
+export default ChannelListSectionCollapse;
