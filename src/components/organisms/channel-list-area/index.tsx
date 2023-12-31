@@ -5,6 +5,7 @@ import ChannelListAreaSection from "../../atoms/channel-list-area-section";
 import { FaCalendarDay, FaHashtag } from "react-icons/fa6";
 import ChannelListSectionCollapse from "../../molecules/channel-list-section-collapse";
 import { HiSpeakerWave } from "react-icons/hi2";
+import ChannelListAreaProfileFooter from "../../molecules/channel-list-area-profile-footer";
 
 function ChannelListArea() {
   const [selectedSingleItemName, setSelectedSingleItemName] = useState("");
@@ -104,9 +105,9 @@ function ChannelListArea() {
   ];
 
   return (
-    <div className="w-[240px] bg-main-gray-3">
+    <div className="w-[240px] bg-main-gray-3 flex flex-col">
       <ChannelListAreaHeader />
-      <div className="w-full h-[calc(100vh-52px)] overflow-y-auto">
+      <div className="flex-1 w-full overflow-y-auto">
         <ChannelListAreaSection>
           <SelectableItem
             leftIcon={<FaCalendarDay />}
@@ -138,6 +139,9 @@ function ChannelListArea() {
           );
         })}
       </div>
+      {/* FOOTER */}
+      <ChannelListAreaProfileFooter />
+      {/* FOOTER */}
     </div>
   );
 }

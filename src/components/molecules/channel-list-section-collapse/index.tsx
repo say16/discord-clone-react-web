@@ -32,7 +32,7 @@ function ChannelListSectionCollapse(props: Props) {
     <motion.div className="">
       <div
         onClick={() => handleToggleCollapse()}
-        className="flex items-center gap-1 py-2 text-xs font-semibold cursor-pointer select-none text-main-white-3 hover:text-main-white-2"
+        className="flex items-center gap-1 py-2 text-xs font-semibold cursor-pointer select-none text-color-hover"
       >
         <motion.div animate={{ rotate: isCollapseOpen ? 0 : -90 }}>
           <FaAngleDown />

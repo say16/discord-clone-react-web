@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { FaUserFriends } from "react-icons/fa";
 import SelectableItem from "../../components/atoms/selectable-item";
+import MainLayoutHeader from "../../components/organisms/main-layout-header";
+import { TbMessageCirclePlus } from "react-icons/tb";
+import { CgInbox } from "react-icons/cg";
+import { BsQuestionCircleFill } from "react-icons/bs";
 
 function MePage() {
   const [selectedTabItemId, setSelectedTabItemId] = useState("");
@@ -30,21 +34,10 @@ function MePage() {
 
   return (
     <div>
-      <header className="px-4 bottom-shadow-1 h-[48px] flex items-center">
-        <div className="flex items-center justify-between w-full h-6">
-          <div className="flex items-center h-full gap-4">
-            {/* ICON & TITLE */}
-            <div className="flex items-center h-full">
-              <div className="flex items-center gap-3 text-main-white-1">
-                <div className="text-2xl text-main-white-3">
-                  <FaUserFriends />
-                </div>
-                <span className="text-sm font-semibold">Arkadaşlar</span>
-              </div>
-            </div>
-            {/* ICON & TITLE */}
-            <div className="w-px h-full rounded-full bg-main-white-1/10" />
-            {/* CUSTOM CONTENT */}
+      <MainLayoutHeader title="Arkadaslar" titleIcon={<FaUserFriends />}>
+        <div className="flex items-center justify-between w-full h-full">
+          <div className="flex h-full">
+            <div className="w-px h-full mx-4 rounded-full bg-main-white-1/10" />
             <div className="flex items-center h-full gap-1">
               {tabData.map((item, index) => (
                 <SelectableItem
@@ -58,11 +51,21 @@ function MePage() {
                 />
               ))}
             </div>
-            {/* CUSTOM CONTENT */}
           </div>
-          <div className="flex items-center">DM</div>
+          <div className="flex items-center justify-end h-full gap-4">
+            <div className="transition-all cursor-pointer text-color-hover">
+              <TbMessageCirclePlus className="h-6 w-fit" />
+            </div>
+            <div className="w-px h-full rounded-full bg-main-white-1/10" />
+            <div className="transition-all cursor-pointer text-color-hover">
+              <CgInbox className="h-6 w-fit" />
+            </div>
+            <div className="transition-all cursor-pointer text-color-hover">
+              <BsQuestionCircleFill className="h-6 w-fit" />
+            </div>
+          </div>
         </div>
-      </header>
+      </MainLayoutHeader>
     </div>
   );
 }

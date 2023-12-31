@@ -5,10 +5,10 @@ import ChannelListArea from "../components/organisms/channel-list-area";
 function MainLayout() {
   return (
     <div className="flex w-full h-full">
-      <div className="flex h-full w-fit">
+      <aside className="flex h-full w-fit">
         <ServerListBar />
         <ChannelListArea />
-      </div>
+      </aside>
       <div className="w-full h-full bg-main-gray-4">
         <Outlet />
       </div>
