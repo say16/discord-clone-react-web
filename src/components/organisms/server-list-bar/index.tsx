@@ -10,7 +10,7 @@ function ServerListBar() {
   };
 
   return (
-    <div className="py-3 bg-main-gray-1">
+    <div className="py-3 overflow-y-auto bg-main-gray-1">
       <div className="flex flex-col items-center gap-2">
         {[...Array(10)].map((item, index) => {
           const isSelected = selectedIndex === index;

@@ -1,21 +1,25 @@
 import React, { ReactNode, useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import { motion, AnimatePresence } from "framer-motion";
-import ChannelListAreaItem from "../../atoms/channel-list-area-item";
+import SelectableItem from "../../atoms/selectable-item";
 
 type Props = {
-  isSelectedChannelItemIndex?: number | null;
-  onClickChannelItem: (index: number) => void;
+  selectedChannelItemIndex?: number | null;
+  selectedChannelItem: any;
+  onClickChannelItem: (e: any) => void;
   collapseTitle?: ReactNode;
   channelsIcon?: ReactNode;
+  channelsData: { id: string; type: string; title?: string }[];
 };
 
 function ChannelListSectionCollapse(props: Props) {
   const {
-    isSelectedChannelItemIndex,
+    selectedChannelItemIndex,
+    selectedChannelItem,
     onClickChannelItem,
     collapseTitle,
     channelsIcon,
+    channelsData,
   } = props;
 
   const [isCollapseOpen, setIsCollapseOpen] = useState(true);
@@ -30,10 +34,7 @@ function ChannelListSectionCollapse(props: Props) {
         onClick={() => handleToggleCollapse()}
         className="flex items-center gap-1 py-2 text-xs font-semibold cursor-pointer select-none text-main-white-3 hover:text-main-white-2"
       >
-        <motion.div
-          animate={{ rotate: isCollapseOpen ? 0 : -90 }}
-          //   transition={{ duration: 0.2 }}
-        >
+        <motion.div animate={{ rotate: isCollapseOpen ? 0 : -90 }}>
           <FaAngleDown />
         </motion.div>
         <div className="">
@@ -46,17 +47,17 @@ function ChannelListSectionCollapse(props: Props) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            // transition={{ duration: 0.2 }}
             className="flex flex-col gap-1"
           >
-            {[...Array(4)].map((item, index) => (
-              <ChannelListAreaItem
+            {channelsData?.map((item, index) => (
+              <SelectableItem
                 key={index}
                 leftIcon={channelsIcon}
-                title={"Channel - " + index}
+                title={item?.title}
                 index={index}
-                isSelected={index === isSelectedChannelItemIndex}
-                onClickItem={(index: number) => onClickChannelItem(index)}
+                item={item}
+                isSelected={item?.id === selectedChannelItem?.id}
+                onClickItem={(e) => onClickChannelItem(e)}
               />
             ))}
           </motion.div>
