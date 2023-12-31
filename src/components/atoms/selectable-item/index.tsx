@@ -53,20 +53,24 @@ function SelectableItem(props: Props) {
       onClick={() =>
         onClickItemHandler({ activeItem: item, activeIndex: index })
       }
-      className={`group flex items-center gap-1 px-2 rounded cursor-pointer transition-all select-none h-8 ${mainDivStyle} ${mainContainerClass}`}
+      className="group"
     >
-      {leftIcon && (
-        <div className={"transition-all text-base" + " " + titleStyle}>
-          {leftIcon}
-        </div>
-      )}
-      {title && (
-        <div
-          className={"transition-all font-medium text-sm" + " " + titleStyle}
-        >
-          {title}
-        </div>
-      )}
+      <div
+        className={`group flex items-center gap-1 px-2 rounded cursor-pointer transition-all select-none h-8 ${mainDivStyle} ${mainContainerClass}`}
+      >
+        {leftIcon && (
+          <div className={"transition-all text-base" + " " + titleStyle}>
+            {leftIcon}
+          </div>
+        )}
+        {title && (
+          <div
+            className={"transition-all font-medium text-sm" + " " + titleStyle}
+          >
+            {title}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
