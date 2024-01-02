@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import ChannelListAreaHeader from "../../molecules/channel-list-area-header";
 import SelectableItem from "../../atoms/selectable-item";
 import ChannelListAreaSection from "../../atoms/channel-list-area-section";
 import { FaCalendarDay, FaHashtag } from "react-icons/fa6";
 import ChannelListSectionCollapse from "../../molecules/channel-list-section-collapse";
 import { HiSpeakerWave } from "react-icons/hi2";
 import ChannelListAreaProfileFooter from "../../molecules/channel-list-area-profile-footer";
+import ChannelListAreaHeader from "../../molecules/channel-list-area-header";
 
 function ChannelListArea() {
   const [selectedSingleItemName, setSelectedSingleItemName] = useState("");
