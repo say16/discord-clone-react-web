@@ -1,5 +1,5 @@
 import React from "react";
-import FriendsPage from "../FriendsPage";
+import FriendsPage from "../friends-page";
 
 function MePage() {
   return (

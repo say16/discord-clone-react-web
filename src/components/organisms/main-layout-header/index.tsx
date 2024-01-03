@@ -12,7 +12,7 @@ function MainLayoutHeader(props: Props) {
     <header className="px-4 bottom-shadow-1 h-[48px] flex items-center">
       <div className="flex items-center w-full h-6">
         {/* ICON & TITLE */}
-        <div className="flex items-center gap-3 text-main-white-1">
+        <div className="flex items-center gap-3 text-main-white-2">
           <div className="text-2xl text-main-white-3">{titleIcon}</div>
           <span className="text-sm font-semibold">{title}</span>
         </div>

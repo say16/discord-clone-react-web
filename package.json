@@ -13,6 +13,7 @@
     "@popperjs/core": "^2.11.8",
     "framer-motion": "^10.16.16",
     "react": "^18.2.0",
+    "react-contenteditable": "^3.3.7",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-popper": "^2.3.0",

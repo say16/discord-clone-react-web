@@ -8,12 +8,14 @@ export default {
         "main-gray-2": "#232428",
         "main-gray-3": "#2A2D31",
         "main-gray-4": "#303338",
+        "main-gray-5": "#383A3F",
         // --
         "main-blue": "#5764F2",
         // --
         "main-white-1": "#f2f3f5",
         "main-white-2": "#dbdee1",
         "main-white-3": "#939BA4",
+        "main-white-4": "#6D6F78",
         // --
         "item-selected": "#3F4248",
         "item-hover": "#35373C",

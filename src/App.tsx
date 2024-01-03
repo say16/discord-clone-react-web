@@ -1,8 +1,9 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
-import MePage from "./pages/MePage";
+import MePage from "./pages/me-page";
 import DirectMessagesLayout from "./layouts/DirectMessagesLayout";
 import ChannelsLayout from "./layouts/ChannelsLayout";
+import ChannelChatPage from "./pages/channel-chat-page";
 
 function App() {
   const router = createBrowserRouter([
@@ -36,7 +37,7 @@ function App() {
           children: [
             {
               path: "",
-              element: <h1>CH</h1>,
+              element: <ChannelChatPage />,
             },
           ],
         },
